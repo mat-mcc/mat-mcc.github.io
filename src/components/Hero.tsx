@@ -46,14 +46,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <p className="text-xl md:text-2xl text-ink/60 max-w-2xl font-light leading-relaxed mx-auto">
+        <p className="text-xl md:text-2xl text-ink/60 max-w-2xl font-light leading-relaxed mx-auto text-center">
           Building the future with code and curiosity. 
           Specializing in backend-leaning development and AI-driven tools.
         </p>
 
         <div className="flex flex-wrap gap-6 items-center justify-center">
           <a 
-            href="https://github.com" 
+            href="https://github.com/mat-mcc" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-ink hover:text-earth transition-colors"
@@ -62,7 +62,7 @@ export default function Hero() {
             <span className="font-medium">GitHub</span>
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/matthewmccaughan/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-ink hover:text-earth transition-colors"
