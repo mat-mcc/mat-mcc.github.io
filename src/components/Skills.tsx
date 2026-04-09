@@ -5,7 +5,7 @@ const SKILL_GROUPS = [
   {
     title: "Frontend",
     icon: <Layout size={20} />,
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Framer Motion"]
+    skills: ["React", "TypeScript", "Tailwind CSS"]
   },
   {
     title: "Backend",
@@ -15,12 +15,12 @@ const SKILL_GROUPS = [
   {
     title: "Languages",
     icon: <Code size={20} />,
-    skills: ["JavaScript", "Python", "Java", "C++", "SQL"]
+    skills: ["Java", "Python", "C++", "C", "SQL"]
   },
   {
     title: "Tools",
     icon: <Terminal size={20} />,
-    skills: ["Git", "Docker", "AWS", "Vercel", "Jest"]
+    skills: ["Git/Github", "Pytorch", "Agentic AI", "OpenCV"]
   }
 ];
 
@@ -29,10 +29,10 @@ export default function Skills() {
     <section className="py-32 px-6 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
         <div className="lg:col-span-1 space-y-6">
-          <h2 className="text-5xl md:text-7xl font-serif italic">Expertise</h2>
+          <h2 className="text-5xl md:text-7xl font-serif italic text-accent">Expertise</h2>
           <p className="text-ink/60 text-lg font-light leading-relaxed">
-            I've spent my time at university and internships mastering the full stack. 
-            I love learning new technologies and applying them to solve real-world problems.
+            I've spent my time at university and on projects improving upon a multitude of technologies. 
+            I love learning new tools and applying them to solve real-world problems.
           </p>
         </div>
 

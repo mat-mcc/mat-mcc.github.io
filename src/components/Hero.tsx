@@ -47,8 +47,8 @@ export default function Hero() {
         </div>
 
         <p className="text-xl md:text-2xl text-ink/60 max-w-2xl font-light leading-relaxed mx-auto">
-          Building the future of the web with code and curiosity. 
-          Specializing in full-stack development and AI-driven applications.
+          Building the future with code and curiosity. 
+          Specializing in backend-leaning development and AI-driven tools.
         </p>
 
         <div className="flex flex-wrap gap-6 items-center justify-center">
