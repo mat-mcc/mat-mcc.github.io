@@ -89,6 +89,6 @@ export async function chatWithResume(message: string, history: { role: 'user' | 
     return response.text || "I'm sorry, I couldn't process that request.";
   } catch (error) {
     console.error("Gemini Error:", error);
-    return "I'm having trouble connecting to my brain right now. Please try again later!";
+    return "I'm having trouble connecting to my brain right now. Try refreshing the page or asking again later!";
   }
 }
