@@ -20,7 +20,7 @@ export default function Hero() {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-accent p-2">
               <div className="w-full h-full rounded-full overflow-hidden bg-ink/5">
                 <img 
-                  src="MattPortfolioPicture.jpg" 
+                  src="public/MattPortfolioPicture.jpg" 
                   alt="Matthew McCaughan" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
