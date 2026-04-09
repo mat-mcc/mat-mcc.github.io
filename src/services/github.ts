@@ -10,6 +10,7 @@ export interface GithubRepo {
   imageUrl?: string;
 }
 
+// defunct code for fetching README preview image for repos
 async function getReadmeImage(fullName: string): Promise<string | undefined> {
   try {
     const response = await fetch(`https://api.github.com/repos/${fullName}/readme`);
