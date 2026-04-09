@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Github, Mail, Linkedin } from 'lucide-react';
+import profilePic from '../../MattPortfolioPicture.jpg';
 
 export default function Hero() {
   return (
@@ -20,7 +21,7 @@ export default function Hero() {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-accent p-2">
               <div className="w-full h-full rounded-full overflow-hidden bg-ink/5">
                 <img 
-                  src={`${import.meta.env.BASE_URL}MattPortfolioPicture.jpg`} 
+                  src={profilePic} 
                   alt="Matthew McCaughan" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
