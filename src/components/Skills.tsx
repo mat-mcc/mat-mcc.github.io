@@ -10,7 +10,7 @@ const SKILL_GROUPS = [
   {
     title: "Backend",
     icon: <Database size={20} />,
-    skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Firebase"]
+    skills: ["JDBC API", "MySQL", "MongoDB", "Node.js",]
   },
   {
     title: "Languages",
