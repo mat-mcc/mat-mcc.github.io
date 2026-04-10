@@ -16,7 +16,17 @@ export default function ResumeChat() {
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [githubContext, setGithubContext] = useState('');
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    fetchGithubRepos('mat-mcc').then(repos => {
+      const context = repos.map(r => 
+        `Repo: ${r.name}\nDescription: ${r.description}\nLanguage: ${r.language}\nURL: ${r.html_url}`
+      ).join('\n\n');
+      setGithubContext(context);
+    });
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -37,7 +47,7 @@ export default function ResumeChat() {
       parts: [{ text: m.content }]
     }));
 
-    const response = await chatWithResume(userMessage, history);
+    const response = await chatWithResume(userMessage, history, githubContext);
     
     setIsTyping(false);
     setMessages(prev => [...prev, { role: 'model', content: response }]);

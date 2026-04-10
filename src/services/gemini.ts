@@ -72,8 +72,11 @@ Resume Data:
 ${RESUME_DATA}
 `;
 
-export async function chatWithResume(message: string, history: { role: 'user' | 'model', parts: { text: string }[] }[]) {
+export async function chatWithResume(message: string, history: { role: 'user' | 'model', parts: { text: string }[] }[], githubContext?: string) {
   try {
+    const fullSystemInstruction = `${SYSTEM_INSTRUCTION}
+${githubContext ? `\nLive GitHub Data:\n${githubContext}` : ''}`;
+
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: [
@@ -81,7 +84,7 @@ export async function chatWithResume(message: string, history: { role: 'user' | 
         { role: 'user', parts: [{ text: message }] }
       ],
       config: {
-        systemInstruction: SYSTEM_INSTRUCTION,
+        systemInstruction: fullSystemInstruction,
         temperature: 0.3,
       },
     });
@@ -89,6 +92,6 @@ export async function chatWithResume(message: string, history: { role: 'user' | 
     return response.text || "I'm sorry, I couldn't process that request.";
   } catch (error) {
     console.error("Gemini Error:", error);
-    return "I'm having trouble connecting to my brain right now. Try refreshing the page or asking again later!";
+    return "I'm having trouble connecting to my brain right now. Please try again later!";
   }
 }

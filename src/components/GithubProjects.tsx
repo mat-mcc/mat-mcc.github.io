@@ -8,7 +8,6 @@ export default function GithubProjects() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Replace 'matthewmccaughan' with your actual github username
     fetchGithubRepos('mat-mcc').then(data => {
       setRepos(data);
       setLoading(false);
