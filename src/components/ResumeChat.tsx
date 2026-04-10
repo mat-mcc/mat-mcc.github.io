@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Send, Bot, User, RefreshCw } from 'lucide-react';
 import Markdown from 'react-markdown';
 import { chatWithResume } from '../services/gemini';
+import { fetchGithubRepos } from '../services/github';
 import { cn } from '../lib/utils';
 
 interface Message {
@@ -16,7 +17,17 @@ export default function ResumeChat() {
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [githubContext, setGithubContext] = useState('');
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    fetchGithubRepos('mat-mcc').then(repos => {
+      const context = repos.map(r =>
+        `Repo: ${r.name}\nDescription: ${r.description}\nLanguage: ${r.language}\nURL: ${r.html_url}\nLast Updated: ${r.updated_at}`
+      ).join('\n\n');
+      setGithubContext(context);
+    });
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -37,7 +48,7 @@ export default function ResumeChat() {
       parts: [{ text: m.content }]
     }));
 
-    const response = await chatWithResume(userMessage, history);
+    const response = await chatWithResume(userMessage, history, githubContext);
     
     setIsTyping(false);
     setMessages(prev => [...prev, { role: 'model', content: response }]);

@@ -72,8 +72,16 @@ Resume Data:
 ${RESUME_DATA}
 `;
 
-export async function chatWithResume(message: string, history: { role: 'user' | 'model', parts: { text: string }[] }[]) {
+export async function chatWithResume(
+  message: string,
+  history: { role: 'user' | 'model', parts: { text: string }[] }[],
+  githubContext?: string
+) {
   try {
+    const fullSystemInstruction = `${SYSTEM_INSTRUCTION}${
+      githubContext ? `\nLive GitHub Data:\n${githubContext}` : ''
+    }`;
+
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: [
@@ -81,7 +89,7 @@ export async function chatWithResume(message: string, history: { role: 'user' | 
         { role: 'user', parts: [{ text: message }] }
       ],
       config: {
-        systemInstruction: SYSTEM_INSTRUCTION,
+        systemInstruction: fullSystemInstruction,
         temperature: 0.3,
       },
     });
