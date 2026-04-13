@@ -92,7 +92,7 @@ export default function App() {
 
       <footer className="py-20 px-6 border-t border-ink/5 text-center">
         <div className="max-w-7xl mx-auto space-y-6">
-          <h2 className="text-3xl font-serif italic">Thank You!.</h2>
+          <h2 className="text-3xl font-serif italic">Thank You!</h2>
           <p className="text-ink/40 font-mono text-xs uppercase tracking-[0.2em]">
             <span className="text-accent">Matthew McCaughan</span> • Built with Gemini & React
           </p>
