@@ -18,7 +18,7 @@ export default function GithubProjects() {
     <section className="py-32 px-6 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
         <div className="space-y-4">
-          <h2 className="text-4xl md:text-6xl italic text-accent">Selected Projects</h2>
+          <h2 className="text-4xl md:text-6xl text-accent">Selected Projects</h2>
           <p className="text-ink/60 max-w-md">
             A collection of my recent work, fetched directly from GitHub.
           </p>
