@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Github, Mail, Linkedin } from 'lucide-react';
+import { Github, Mail, Linkedin, FileText } from 'lucide-react';
 import profilePic from '../../MattPortfolioPicture.jpg';
 
 export default function Hero() {
@@ -69,6 +69,15 @@ export default function Hero() {
           >
             <Linkedin size={24} />
             <span className="font-medium">LinkedIn</span>
+          </a>
+          <a 
+            href="/MatthewMcCaughanResume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-ink hover:text-earth transition-colors"
+          >
+            <FileText size={24} />
+            <span className="font-medium">Resume</span>
           </a>
           <a 
             href="mailto:matthewmccaughan1@gmail.com"
