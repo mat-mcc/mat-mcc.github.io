@@ -97,10 +97,10 @@ export default function App() {
           <div className="space-y-4">
             <p className="font-mono font-bold text-lg text-sol-green">Matthew McCaughan</p>
             <p className="text-sol-base01 text-sm leading-relaxed font-sans">
-              Software Engineer specializing in backend systems, modern web development, and AI-driven tools.
+              Software Engineer specializing in backend systems, some web development, and AI-driven tools.
             </p>
             <p className="text-xs font-mono text-sol-base01 bg-sol-base2 border border-sol-base1/20 px-3 py-1.5 rounded-lg inline-block">
-              <span className="text-sol-green">// </span>Open to opportunities
+              <span className="text-sol-green">// </span> Open to work!
             </p>
           </div>
 
