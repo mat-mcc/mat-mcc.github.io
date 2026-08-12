@@ -1,51 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", serif;
+  --font-serif: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-paper: #f7f3f0;
-  --color-ink: #1a1c1a;
-  --color-accent: #004225;
-  --color-earth: #8b7355;
+  /* Solarized Light Base Colors */
+  --color-paper: #fdf6e3;
+  --color-panel: #eee8d5;
+  --color-ink: #073642;
+  --color-muted: #586e75;
+  --color-accent: #268bd2;
+  --color-earth: #cb4b16;
+
+  /* Solarized Syntax Palette */
+  --color-sol-base3: #fdf6e3;
+  --color-sol-base2: #eee8d5;
+  --color-sol-base1: #93a1a1;
+  --color-sol-base0: #839496;
+  --color-sol-base00: #657b83;
+  --color-sol-base01: #586e75;
+  --color-sol-base02: #073642;
+  --color-sol-base03: #002b36;
+
+  --color-sol-yellow: #b58900;
+  --color-sol-orange: #cb4b16;
+  --color-sol-red: #dc322f;
+  --color-sol-magenta: #d33682;
+  --color-sol-violet: #6c71c4;
+  --color-sol-blue: #268bd2;
+  --color-sol-cyan: #2aa198;
+  --color-sol-green: #859900;
 }
 
 @layer base {
   body {
-    @apply bg-paper text-ink font-sans antialiased selection:bg-accent/20 selection:text-accent;
+    @apply bg-paper text-sol-base00 font-sans antialiased selection:bg-sol-blue/20 selection:text-sol-blue;
+    background-color: #fdf6e3;
   }
 
   h1, h2, h3, h4 {
-    @apply font-serif tracking-tight;
+    @apply font-mono tracking-tight text-sol-base02 font-bold;
   }
 }
 
 .glass-panel {
-  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+  @apply bg-panel/70 backdrop-blur-md border border-sol-base1/20 shadow-sm;
 }
 
 .markdown-body {
-  @apply prose prose-sm max-w-none prose-headings:font-serif prose-a:text-earth;
+  @apply prose prose-sm max-w-none prose-headings:font-mono prose-headings:text-sol-base02 prose-p:font-sans prose-p:text-sol-base00 prose-a:text-sol-blue prose-code:text-sol-magenta prose-code:bg-sol-base2/60 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-strong:text-sol-base02;
 }
 
 .prose-invert {
-  --tw-prose-body: #fff;
-  --tw-prose-headings: #fff;
-  --tw-prose-lead: #fff;
-  --tw-prose-links: #fff;
-  --tw-prose-bold: #fff;
-  --tw-prose-counters: #fff;
-  --tw-prose-bullets: #fff;
-  --tw-prose-hr: #fff;
-  --tw-prose-quotes: #fff;
-  --tw-prose-quote-borders: #fff;
-  --tw-prose-captions: #fff;
-  --tw-prose-code: #fff;
-  --tw-prose-pre-code: #fff;
-  --tw-prose-pre-bg: #fff;
-  --tw-prose-th-borders: #fff;
-  --tw-prose-td-borders: #fff;
+  --tw-prose-body: #fdf6e3;
+  --tw-prose-headings: #fdf6e3;
+  --tw-prose-lead: #fdf6e3;
+  --tw-prose-links: #2aa198;
+  --tw-prose-bold: #fdf6e3;
+  --tw-prose-counters: #fdf6e3;
+  --tw-prose-bullets: #fdf6e3;
+  --tw-prose-hr: #93a1a1;
+  --tw-prose-quotes: #fdf6e3;
+  --tw-prose-quote-borders: #268bd2;
+  --tw-prose-captions: #93a1a1;
+  --tw-prose-code: #b58900;
+  --tw-prose-pre-code: #fdf6e3;
+  --tw-prose-pre-bg: #073642;
+  --tw-prose-th-borders: #93a1a1;
+  --tw-prose-td-borders: #93a1a1;
 }
+

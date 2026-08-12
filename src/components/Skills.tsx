@@ -5,22 +5,30 @@ const SKILL_GROUPS = [
   {
     title: "Frontend",
     icon: <Layout size={20} />,
+    color: "text-sol-blue bg-sol-blue/10 border-sol-blue/30",
+    badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-blue hover:text-sol-blue hover:bg-sol-blue/10",
     skills: ["React", "TypeScript", "Tailwind CSS"]
   },
   {
     title: "Backend",
     icon: <Database size={20} />,
-    skills: ["JDBC API", "MySQL", "MongoDB", "Node.js",]
+    color: "text-sol-green bg-sol-green/10 border-sol-green/30",
+    badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-green hover:text-sol-green hover:bg-sol-green/10",
+    skills: ["JDBC API", "MySQL", "MongoDB", "Node.js"]
   },
   {
     title: "Languages",
     icon: <Code size={20} />,
+    color: "text-sol-magenta bg-sol-magenta/10 border-sol-magenta/30",
+    badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-magenta hover:text-sol-magenta hover:bg-sol-magenta/10",
     skills: ["Java", "Python", "C++", "C", "SQL"]
   },
   {
     title: "Tools",
     icon: <Terminal size={20} />,
-    skills: ["Git/Github", "Pytorch", "Agentic AI", "OpenCV"]
+    color: "text-sol-orange bg-sol-orange/10 border-sol-orange/30",
+    badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-orange hover:text-sol-orange hover:bg-sol-orange/10",
+    skills: ["Git/Github", "PyTorch", "Agentic AI", "OpenCV"]
   }
 ];
 
@@ -29,10 +37,11 @@ export default function Skills() {
     <section className="py-32 px-6 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
         <div className="lg:col-span-1 space-y-6">
-          <h2 className="text-5xl md:text-7xl font-serif text-accent">Expertise</h2>
-          <p className="text-ink/60 text-lg font-light leading-relaxed">
-            I've spent my time at university and on projects improving upon a multitude of technologies. 
-            I love learning new tools and applying them to solve real-world problems.
+          <h2 className="text-4xl md:text-6xl font-mono font-bold tracking-tight text-sol-green">Expertise</h2>
+          <p className="text-sol-base00 text-lg font-light leading-relaxed">
+            Through my computer science degree at Rutgers and hands-on projects,
+            I’ve cultivated expertise across full-stack development, database architecture, and AI tooling.
+            I enjoy taking on complex problems and building practical software with new tools.
           </p>
         </div>
 
@@ -44,17 +53,19 @@ export default function Skills() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="space-y-6"
+              className="space-y-6 bg-sol-base2/40 p-6 rounded-2xl border border-sol-base1/20"
             >
-              <div className="flex items-center gap-3 text-accent">
-                {group.icon}
-                <h3 className="text-xl font-serif font-medium text-ink">{group.title}</h3>
+              <div className="flex items-center gap-3">
+                <div className={`p-2 rounded-lg border ${group.color}`}>
+                  {group.icon}
+                </div>
+                <h3 className="text-xl font-mono font-medium text-sol-base02">{group.title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {group.skills.map(skill => (
-                  <span 
+                  <span
                     key={skill}
-                    className="px-4 py-2 rounded-full bg-ink/5 text-sm font-medium text-ink/70 hover:bg-earth/10 hover:text-earth transition-colors"
+                    className={`px-3.5 py-1.5 rounded-xl border text-xs font-mono transition-all cursor-default shadow-xs ${group.badgeColor}`}
                   >
                     {skill}
                   </span>

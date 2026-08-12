@@ -18,73 +18,71 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="relative shrink-0"
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-accent p-2">
-              <div className="w-full h-full rounded-full overflow-hidden bg-ink/5">
-                <img 
-                  src="MattPortfolioPicture.jpg"
-                  alt="Matthew McCaughan" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-sol-green overflow-hidden shadow-xl shadow-sol-blue/10 bg-sol-base2">
+              <img
+                src="MattPortfolioPicture.jpg"
+                alt="Matthew McCaughan"
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </motion.div>
 
           <div className="space-y-4">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-earth font-mono text-sm tracking-widest uppercase"
+              className="text-black font-mono text-sm tracking-widest uppercase inline-block bg-sol-green/10 px-4 py-1.5 rounded-full border border-sol-green/20"
             >
-              Computer Science Graduate
+              // Software Engineer
             </motion.span>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif leading-tight text-accent">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-mono font-bold tracking-tight leading-tight text-sol-green">
               Matthew <br />
               <span>McCaughan</span>
             </h1>
           </div>
         </div>
 
-        <p className="text-xl md:text-2xl text-ink/60 max-w-2xl font-light leading-relaxed mx-auto text-center">
-          Building the future with code and curiosity. 
-          Specializing in backend-leaning development and AI-driven tools.
+        <p className="text-xl md:text-2xl text-sol-base00 max-w-2xl font-light leading-relaxed mx-auto text-center">
+          Building the future with code and curiosity.
+          Specializing in <span className="text-sol-blue font-medium">backend-leaning</span> development and <span className="text-sol-cyan font-medium">AI-driven</span> tools.
         </p>
 
-        <div className="flex flex-wrap gap-6 items-center justify-center">
-          <a 
-            href="https://github.com/mat-mcc" 
-            target="_blank" 
+        <div className="flex flex-wrap gap-4 items-center justify-center pt-4">
+          <a
+            href="https://github.com/mat-mcc"
+            target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-ink hover:text-earth transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sol-base2 border border-sol-base1/20 text-sol-base02 hover:border-sol-blue hover:text-sol-blue transition-all font-mono text-sm shadow-sm hover:shadow"
           >
-            <Github size={24} />
-            <span className="font-medium">GitHub</span>
+            <Github size={18} className="text-sol-blue" />
+            <span>GitHub</span>
           </a>
-          <a 
-            href="https://www.linkedin.com/in/matthewmccaughan/" 
-            target="_blank" 
+          <a
+            href="https://www.linkedin.com/in/matthewmccaughan/"
+            target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-ink hover:text-earth transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sol-base2 border border-sol-base1/20 text-sol-base02 hover:border-sol-violet hover:text-sol-violet transition-all font-mono text-sm shadow-sm hover:shadow"
           >
-            <Linkedin size={24} />
-            <span className="font-medium">LinkedIn</span>
+            <Linkedin size={18} className="text-sol-violet" />
+            <span>LinkedIn</span>
           </a>
-          <a 
-            href="/MatthewMcCaughanResume.pdf" 
-            target="_blank" 
+          <a
+            href="/MatthewMcCaughanResume.pdf"
+            target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-ink hover:text-earth transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sol-base2 border border-sol-base1/20 text-sol-base02 hover:border-sol-magenta hover:text-sol-magenta transition-all font-mono text-sm shadow-sm hover:shadow"
           >
-            <FileText size={24} />
-            <span className="font-medium">Resume</span>
+            <FileText size={18} className="text-sol-magenta" />
+            <span>Resume</span>
           </a>
-          <a 
+          <a
             href="mailto:matthewmccaughan1@gmail.com"
-            className="flex items-center gap-2 text-ink hover:text-earth transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sol-base2 border border-sol-base1/20 text-sol-base02 hover:border-sol-green hover:text-sol-green transition-all font-mono text-sm shadow-sm hover:shadow"
           >
-            <Mail size={24} />
-            <span className="font-medium">Email</span>
+            <Mail size={18} className="text-sol-green" />
+            <span>Email</span>
           </a>
         </div>
       </motion.div>
