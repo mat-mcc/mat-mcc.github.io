@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Code, Layout, Database, Terminal, Cpu, Globe } from 'lucide-react';
+import { Code, Layout, Database, Wrench, Cpu, Globe } from 'lucide-react';
 
 const SKILL_GROUPS = [
   {
@@ -14,21 +14,21 @@ const SKILL_GROUPS = [
     icon: <Database size={20} />,
     color: "text-sol-green bg-sol-green/10 border-sol-green/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-green hover:text-sol-green hover:bg-sol-green/10",
-    skills: ["JDBC API", "MySQL", "MongoDB", "Node.js"]
+    skills: ["Spring Boot", "JDBC API", "MySQL", "MongoDB", "Node.js", "REST API"]
   },
   {
     title: "Languages",
     icon: <Code size={20} />,
     color: "text-sol-magenta bg-sol-magenta/10 border-sol-magenta/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-magenta hover:text-sol-magenta hover:bg-sol-magenta/10",
-    skills: ["Java", "Python", "C++", "C", "SQL"]
+    skills: ["Java", "Python", "C Family", "SQL"]
   },
   {
     title: "Tools",
-    icon: <Terminal size={20} />,
+    icon: <Wrench size={20} />,
     color: "text-sol-orange bg-sol-orange/10 border-sol-orange/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-orange hover:text-sol-orange hover:bg-sol-orange/10",
-    skills: ["Git/Github", "PyTorch", "Agentic AI", "OpenCV"]
+    skills: ["Git/Github", "PyTorch", "OpenCV", "Agentic AI", "LLMs", "Claude Code", "Google Antimatter"]
   }
 ];
 
