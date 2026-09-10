@@ -28,15 +28,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <div className="space-y-4">
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-black font-mono text-sm tracking-widest uppercase inline-block bg-sol-green/10 px-4 py-1.5 rounded-full border border-sol-green/20"
-            >
-              // Software Engineer
-            </motion.span>
+          <div>
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-mono font-bold tracking-tight leading-tight text-sol-green">
               Matthew <br />
               <span>McCaughan</span>

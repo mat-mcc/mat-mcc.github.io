@@ -3,32 +3,32 @@ import { Code, Layout, Database, Wrench, Cpu, Globe } from 'lucide-react';
 
 const SKILL_GROUPS = [
   {
-    title: "Frontend",
+    title: "Frontend & Web",
     icon: <Layout size={20} />,
     color: "text-sol-blue bg-sol-blue/10 border-sol-blue/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-blue hover:text-sol-blue hover:bg-sol-blue/10",
-    skills: ["React", "TypeScript", "Tailwind CSS"]
+    skills: ["React", "TypeScript", "Vite", "Tailwind CSS"]
   },
   {
     title: "Backend",
     icon: <Database size={20} />,
     color: "text-sol-green bg-sol-green/10 border-sol-green/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-green hover:text-sol-green hover:bg-sol-green/10",
-    skills: ["Spring Boot", "JDBC API", "MySQL", "MongoDB", "Node.js", "REST API"]
+    skills: ["Spring Boot", "JDBC API", "MySQL", "REST API", "Node.js", "Docker", "Maven"]
   },
   {
     title: "Languages",
     icon: <Code size={20} />,
     color: "text-sol-magenta bg-sol-magenta/10 border-sol-magenta/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-magenta hover:text-sol-magenta hover:bg-sol-magenta/10",
-    skills: ["Java", "Python", "C Family", "SQL"]
+    skills: ["Java", "Python", "C++", "SQL"]
   },
   {
     title: "Tools",
     icon: <Wrench size={20} />,
     color: "text-sol-orange bg-sol-orange/10 border-sol-orange/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-orange hover:text-sol-orange hover:bg-sol-orange/10",
-    skills: ["Git/Github", "PyTorch", "OpenCV", "Agentic AI", "LLMs", "Claude Code", "Google Antimatter"]
+    skills: ["PyTorch", "Scikit-learn", "OpenCV", "RAG", "Google Antigravity", "Claude Code", "GitHub Actions", "Git & GitHub"]
   }
 ];
 

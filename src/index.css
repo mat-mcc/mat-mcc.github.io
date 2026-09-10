@@ -1,29 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-
+:root {
   /* Solarized Light Base Colors */
-  --color-paper: #fdf6e3;
-  --color-panel: #eee8d5;
-  --color-ink: #073642;
-  --color-muted: #586e75;
+  --paper: #fdf6e3;
+  --panel: #eee8d5;
+  --ink: #073642;
+  --muted: #586e75;
+
+  /* Solarized Syntax Palette */
+  --sol-base3: #fdf6e3;
+  --sol-base2: #eee8d5;
+  --sol-base1: #93a1a1;
+  --sol-base0: #839496;
+  --sol-base00: #657b83;
+  --sol-base01: #586e75;
+  --sol-base02: #073642;
+  --sol-base03: #002b36;
+}
+
+.dark {
+  /* Solarized / Jet Black Dark Mode Base Colors */
+  --paper: #09090b;
+  --panel: #141416;
+  --ink: #f8fafc;
+  --muted: #a1a1aa;
+
+  --sol-base3: #09090b;
+  --sol-base2: #141417;
+  --sol-base1: #334155;
+  --sol-base0: #94a3b8;
+  --sol-base00: #cbd5e1;
+  --sol-base01: #a1a1aa;
+  --sol-base02: #f8fafc;
+  --sol-base03: #ffffff;
+}
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Solarized / Theme Colors */
+  --color-paper: var(--paper);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
   --color-accent: #268bd2;
   --color-earth: #cb4b16;
 
   /* Solarized Syntax Palette */
-  --color-sol-base3: #fdf6e3;
-  --color-sol-base2: #eee8d5;
-  --color-sol-base1: #93a1a1;
-  --color-sol-base0: #839496;
-  --color-sol-base00: #657b83;
-  --color-sol-base01: #586e75;
-  --color-sol-base02: #073642;
-  --color-sol-base03: #002b36;
+  --color-sol-base3: var(--sol-base3);
+  --color-sol-base2: var(--sol-base2);
+  --color-sol-base1: var(--sol-base1);
+  --color-sol-base0: var(--sol-base0);
+  --color-sol-base00: var(--sol-base00);
+  --color-sol-base01: var(--sol-base01);
+  --color-sol-base02: var(--sol-base02);
+  --color-sol-base03: var(--sol-base03);
 
   --color-sol-yellow: #b58900;
   --color-sol-orange: #cb4b16;
@@ -37,8 +72,9 @@
 
 @layer base {
   body {
-    @apply bg-paper text-sol-base00 font-sans antialiased selection:bg-sol-blue/20 selection:text-sol-blue;
-    background-color: #fdf6e3;
+    @apply bg-paper text-sol-base00 font-sans antialiased selection:bg-sol-blue/20 selection:text-sol-blue transition-colors duration-300;
+    background-color: var(--paper);
+    color: var(--sol-base00);
   }
 
   h1, h2, h3, h4 {

@@ -54,7 +54,7 @@ export default function GithubProjects() {
               </div>
 
               <h3 className="text-xl font-mono font-medium text-sol-base02 mb-3 group-hover:text-sol-blue transition-colors flex items-center gap-1">
-                <span className="text-sol-cyan text-sm">//</span> {repo.name.replace(/-/g, ' ')}
+                <span className="text-sol-cyan text-sm"></span> {repo.name.replace(/-/g, ' ')}
               </h3>
 
               <p className="text-sol-base00 text-sm font-light mb-8 flex-grow line-clamp-3 leading-relaxed">
@@ -62,11 +62,11 @@ export default function GithubProjects() {
               </p>
 
               <div className="flex items-center justify-between pt-6 border-t border-sol-base1/15">
-                <span className="text-xs font-mono text-sol-green bg-white/10 px-2.5 py-1 rounded border border-sol-green/20">
+                <span className="text-xs font-mono text-sol-green bg-sol-green/10 px-2.5 py-1 rounded border border-sol-green/20">
                   {repo.language || "Multiple Languages"}
                 </span>
                 <span className="text-xs font-mono text-sol-cyan group-hover:underline">
-                  view_source() &rarr;
+                  viewSource() &rarr;
                 </span>
               </div>
             </motion.a>
