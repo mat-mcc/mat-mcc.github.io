@@ -4,89 +4,58 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 
 export const RESUME_DATA = `
 Matthew McCaughan
-Manalapan, NJ 07726
-732-742-6904 (Cell)
-matthewmccaughan1@gmail.com 	
-www.linkedin.com/in/matthewmccaughan 
-
-Summary:
-Computer Science graduate with experience developing machine learning applications, database systems, and low-level architectures. 
-Proficient in Python, Java, C++, and SQL.
-Projects include an interactive neural network-based digit recognition system, a custom 8-bit CPU and assembler, and a JDBC-based student database query platform, and more.
-Education:
-Bachelor of Science, Computer Science, May 2025
-Rutgers University, New Brunswick, NJ
-
-Relevant coursework:
-Data Structures
-Algorithms
-Computer Architecture
-Databases
-Software Methodology
-Artificial Intelligence
-Machine Learning
-Computer Imaging & Multimedia
-
-Skills:
-Programming: Python, Java, SQL, C++, C, SQL
-ML/AI: PyTorch, TensorFlow, Scikit-learn
-Data & Visualization: Pandas, NumPy, Matplotlib, OpenCV, Pillow
+Manalapan, NJ 07726 | 732-742-6904 | matthewmccaughan1@gmail.com | linkedin.com/in/matthewmccaughan |
+github.com/mat-mcc
+Summary
+Software Engineer with experience developing machine learning applications, AI-integrated systems, and database
+systems. Proficient in Python, Java, C++, and SQL. Projects include an interactive neural network-based digit
+recognition system, an AI chatbot leveraging RAG with live data injection, and a Spring Boot REST API for university
+database management.
+Education
+Rutgers University New Brunswick, NJ
+Bachelor of Science in Computer Science Aug. 2021 – May 2025
+Projects
+University Management REST API | Repo | Spring Boot, Spring Data JPA, MySQL, Docker
+• Modernized a legacy JDBC command-line application into a full REST API using Spring Boot and Spring Data
+JPA, implementing a layered architecture (controller/service/repository/DTO/mapper) across 4 core domains
+(students, courses, departments, enrollments)
+• Built business logic layer handling GPA calculation, transcript generation, enrollment capacity limits, and
+duplicate-enrollment prevention with custom exception handling mapped to appropriate HTTP status codes;
+containerized the full stack with Docker Compose for one-command deployment
+Interactive Handwritten Digit Recognition | Repo | Python
+• Designed and implemented an end-to-end machine learning application that trains and deploys a LeNet-5
+convolutional neural network for handwritten digit classification on the MNIST dataset (∼99% accuracy)
+• Built an image preprocessing pipeline using OpenCV (thresholding, centering, normalization) to convert user-drawn
+input into model-compatible tensors
+• Structured the project as a modular ML system including model training, evaluation, confusion matrix analysis,
+checkpointing, and an integrated user interface; enhanced the original 1998 LeNet-5 architecture with modern deep
+learning techniques to improve accuracy and training stability
+Interactive Portfolio & Resume ChatBot | Live Site | Gemini API, GitHub REST API, React, TypeScript, Vite, RAG
+• Built and deployed a personal portfolio website to GitHub Pages using React, TypeScript, and Vite
+• Integrated an LLM chatbot via the Google Gemini API with a RAG pipeline injecting live GitHub data and resume
+context, enabling accurate conversational answers about skills, projects, and experience
+• Automated deployment via GitHub Actions CI/CD, implementing secure secret management for API credentials
+and enabling continuous delivery for every push on GitHub Pages
+ReceiptReader | Repo | Java, Tess4J/Tesseract OCR, Swing, Maven
+• Built a Java desktop app that uses local OCR to scan receipt images and split itemized costs fairly among a group,
+with adaptive thresholding to handle varying photo quality
+• Implemented a multi-format parser strategy chain to extract line items across different receipt layouts, paired with
+a Swing UI for reviewing and editing scanned results before splitting
+Skills
+Programming: Python, Java, SQL, C++, TypeScript
+ML/AI: PyTorch, Scikit-learn, RAG
+Data & Visualization: NumPy, Matplotlib, Pillow, OCR (Tesseract)
 GUI & Apps: Android, JavaFX, Tkinter
+Dev Tools: Docker, Maven, Git, GitHub Actions
+AI Dev Tools: Google Antigravity, Claude Code, Agentic Programming
+Relevant Coursework
+Data Structures, Algorithms, Computer Architecture, Databases, Software Methodology, Artificial Intelligence, Machine
+Learning, Computer Imaging & Multimedia
 
-Projects:
-Project files available on GitHub
-
-Interactive Handwritten Digit Recognition (LeNet-5 CNN)
-Python, PyTorch, OpenCV, Tkinter, NumPy, Matplotlib, Scikit-Learn
-Designed and implemented an end-to-end machine learning application that trains and deploys a LeNet-5 convolutional neural network for handwritten digit classification on the MNIST dataset (~99% accuracy).
-Developed an interactive GUI drawing interface with tkinter allowing users to sketch digits and receive real-time model predictions through model inference.
-Built an image preprocessing pipeline using OpenCV (thresholding, centering, normalization) to convert user-drawn input into model-compatible tensors.
-Structured the project as a modular ML system including model training, evaluation, confusion matrix analysis, checkpointing, and an integrated user interface.
-
-Custom 8-Bit CPU and Assembler with Logisim (M-ARM / MARMalade)
-Python, Logisim
-Designed and implemented a custom 8-bit CPU architecture (MARMalade) with 4 general-purpose registers and a compact instruction set supporting load, add, and subtract operations.
-Built Python assembler translating M-ARM assembly into executable machine code, enabling automated compilation pipeline
-Integrated hardware and software by creating an end-to-end development pipeline: authoring custom assembly, compiling via assembler, and executing via hardware simulation in Logisim.
-Maintained clear and accessible documentation, enabling long-term development and reproducibility of the project.
-
-Student Database Query Tool:
-Python, Java, MySQL, JDBC API
-Designed and implemented a comprehensive Java-based student information query system using JDBC, enabling interactive searches by GPA thresholds, major/minor, course enrollment, and department statistics.
-Built a SQL-integrated backend via JDBC integration to dynamically query and aggregate student records (e.g., GPA calculations, major/minor listings, course grade breakdowns) from a relational database, supporting live user interaction in the command line.
-Developed reusable SQL logic and modular Java components for handling student metadata, reducing redundant code across multiple query paths while improving maintainability and scalability for unseen data.
-Optimized database access patterns through use of prepared statements and efficient result handling for querying majors, minors, GPA, and enrollment statistics, minimizing redundant SQL calls and enhancing performance.
-
-Receipt Reader:
-Java, Tesseract OCR, Swing for Java, Maven, JUnit
-ReceiptReader is a Java app that allows for scanning or inputting of 
-receipt information and subsequent splitting of receipts between 1 or 
-more people. Instead of simple even splitting between members. 
-ReceiptReader allows for extended options for splitting items.
-OCR capability : Tesseract OCR for character recognition in receipt photos. 
-Designed to run locally. No calls or API required.
-Image and OCR processing : Threshholding and grayscale conversion helps to 
-"clean up" photos and improve OCR results. OCR attempts to maximize accurate 
-output by attempting multiple receipt formats and regular expressions.
-Editable information : Add or remove data based on both simple input and OCR 
-results. Review and correct price and name for each item.
-Splitting Logic : Adjust splitting rules for each item in list.
-
-
-Portfolio Website (this website) mat-mcc.github.io
-React, Typescipt, CSS, Google Gemini API, Vite, Github Actions
-My portfolio website buult using React TypeScript and Vite, and expedited with
-agentic ai paradigm using google antigravity and claude code.
-MattBot (AI Assistant): An interactive chatbot grounded in my 
-professional resume data using RAG (Retrieval-Augmented Generation) 
-principles. It can answer specific questions about my experience, education, and skills.
-Live GitHub Integration: Dynamically fetches and displays my latest 
-projects directly from the GitHub REST API.
-CI/CD: Automated deployment pipeline to GitHub Pages via GitHub Actions.
-
-Extra Data:
-Primarily use Java for backend infrastructure and python for machine learning and passion projects.
+Misc. Data:
+Primarily use Java for backend infrastructure projects and Python for machine learning and passion projects.
 Open to relocation, but located in the NYC Metropolitan area.
+
 `;
 
 const SYSTEM_INSTRUCTION = `

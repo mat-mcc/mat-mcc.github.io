@@ -28,7 +28,7 @@ const SKILL_GROUPS = [
     icon: <Wrench size={20} />,
     color: "text-sol-orange bg-sol-orange/10 border-sol-orange/30",
     badgeColor: "bg-sol-base2 text-sol-base02 border-sol-base1/20 hover:border-sol-orange hover:text-sol-orange hover:bg-sol-orange/10",
-    skills: ["PyTorch", "Scikit-learn", "OpenCV", "RAG", "Google Antigravity", "Claude Code", "GitHub Actions", "Git & GitHub"]
+    skills: ["PyTorch", "Scikit-learn", "OpenCV", "RAG", "Google Antigravity", "Claude Code", " CI/CD with GitHub Actions", "Git & GitHub"]
   }
 ];
 
